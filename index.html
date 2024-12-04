@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible eSignature</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="signature-container">
+            <label for="signatureName" class="signature-label">Full Name:</label>
+            <input 
+                type="text" 
+                id="signatureName" 
+                class="signature-input"
+                aria-describedby="signatureHelp"
+                required
+            >
+            <p id="signatureHelp" class="help-text">
+                Enter your full name or use the canvas below to draw your signature
+            </p>
+
+            <div class="canvas-container">
+                <canvas 
+                    id="signatureCanvas" 
+                    width="400" 
+                    height="200"
+                    role="img"
+                    aria-label="Signature drawing area"
+                    tabindex="0"
+                ></canvas>
+                
+                <div class="button-group">
+                    <button 
+                        type="button" 
+                        id="clearButton" 
+                        class="btn"
+                        aria-label="Clear signature"
+                    >
+                        Clear
+                    </button>
+                    <button 
+                        type="button" 
+                        id="generateButton" 
+                        class="btn"
+                        aria-label="Generate signature from name"
+                    >
+                        Generate from Name
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html> 

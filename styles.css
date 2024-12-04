@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #2c3e50;
+    --background-color: #ffffff;
+    --error-color: #e74c3c;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.signature-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.signature-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.signature-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signature-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.help-text {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+.canvas-container {
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #f8f9fa;
+}
+
+#signatureCanvas {
+    width: 100%;
+    height: 200px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--background-color);
+    cursor: crosshair;
+}
+
+#signatureCanvas:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+.button-group {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--background-color), 0 0 0 4px var(--accent-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .signature-container {
+        padding: 10px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+} 
